@@ -1,0 +1,39 @@
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+html {
+    font-size: 62.5%; /* 10px size. Percentage allows for accessibility for users when they adjust default font size used in their browser*. Default browser fontsize is 16px, and making it 10px by percentage makes it easier for rem values */
+}
+
+.wrapper {
+    max-width: 1420px;
+    width: 90%;
+    margin: 0 auto;
+}

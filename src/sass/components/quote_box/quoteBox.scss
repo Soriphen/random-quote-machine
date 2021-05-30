@@ -1,0 +1,86 @@
+@import '../../variablesMixins';
+
+#App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include media('<=tablet') {
+        width: 100%;
+    }
+    #quote-box {
+        background-color: #fff;
+        width: 70rem;
+        max-width: 100%;
+        padding: 3.7rem 4.3rem 3.7rem 4.3rem;
+        border-radius: 3px;
+        @include media('<=tablet') {
+            width: 100%;
+            border-radius: 0;
+        }
+        #text {
+            font-size: calc(2rem + 2vmin);
+            text-align: center;
+            @include media('<=tablet') {
+                font-size: calc(2.5rem + 2vmin);
+            }
+        }
+        #author {
+            font-size: calc(1rem + 2vmin);
+            font-weight: 100;
+            text-align: right;
+            margin-top: 2rem;
+            @include media('<=tablet') {
+                font-size: calc(1.5rem + 2vmin);
+                margin-top: 2.5rem;
+            }
+            @include media('<=phone') {
+                text-align: center;
+            }
+        }
+        #button-box {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            @include media('<=tablet') {
+                flex-direction: column-reverse;
+            }
+            #new-quote {
+                font-size: calc(.5rem + 2vmin);
+                margin-top: 5rem;
+                border-radius: 3px;
+                &:hover {
+                    opacity: 0.7;
+                }
+                @include media('<=tablet') {
+                    float: none;
+                    margin-top: 1rem;
+                    width: 100%;
+                    font-size: calc(1rem + 2vmin);
+                }
+            }
+            #tweet-quote {
+                color: white;
+                padding: 1rem;
+                transition: background 250ms ease-in-out, 
+                            transform 150ms ease;
+                margin-top: 5rem;
+                width: 5rem;
+                text-align: center;
+                font-size: calc(1rem + 2vmin);
+                border-radius: 3px;
+                display: inline-block;
+                &:active {
+                    transform: scale(0.99);
+                }
+                &:hover {
+                    opacity: 0.7;
+                }
+                @include media('<=tablet') {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
